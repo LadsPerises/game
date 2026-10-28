@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="hero" aria-label="PopUP 3D Angola">
+    <main class="site">
+      <section class="hero" aria-label="PopUP 3D Angola">
       <div class="hero__background" aria-hidden="true"></div>
       <div class="hero__overlay" aria-hidden="true"></div>
 
@@ -59,8 +60,43 @@
         </div>
       </section>
 
-      <div class="notice" role="status" aria-live="polite"></div>
-      <div class="hero__bottom-line" aria-hidden="true"></div>
+        <div class="notice" role="status" aria-live="polite"></div>
+        <div class="hero__bottom-line" aria-hidden="true"></div>
+      </section>
+
+      <section class="catalog" id="catalogo" aria-labelledby="catalog-title">
+        <div class="catalog__backdrop" aria-hidden="true"></div>
+        <div class="catalog__inner">
+          <div class="catalog__heading">
+            <p class="section-kicker"><span class="cube-icon" aria-hidden="true"></span> Catálogo <i></i></p>
+            <h2 id="catalog-title">Produtos</h2>
+            <p>Impressões 3D com qualidade e detalhe.</p>
+          </div>
+
+          <div class="catalog__grid">
+            <article class="product-card product-card--figures">
+              <div class="product-card__media"><img class="product-card__image" src="assets/catalog/figura-dragao-gamer.png" alt="Figura de dragão colecionável impressa em 3D" /></div>
+              <div class="product-card__footer"><h3>Figuras</h3><span aria-hidden="true">↗</span></div>
+            </article>
+            <article class="product-card product-card--accessories">
+              <div class="product-card__media"><img class="product-card__image" src="assets/catalog/dock-gamer-headset-comandos.png" alt="Dock gamer para headset e comandos impresso em 3D" /></div>
+              <div class="product-card__footer"><h3>Setup gamer</h3><span aria-hidden="true">↗</span></div>
+            </article>
+            <article class="product-card product-card--functional">
+              <div class="product-card__media"><img class="product-card__image" src="assets/catalog/suportes-comandos-gaming.png" alt="Suportes para comandos gaming impressos em 3D" /></div>
+              <div class="product-card__footer"><h3>Acessórios gaming</h3><span aria-hidden="true">↗</span></div>
+            </article>
+            <article class="product-card product-card--custom">
+              <div class="product-card__media"><img class="product-card__image" src="assets/catalog/capacete-cosplay-sci-fi.png" alt="Capacete sci-fi de cosplay impresso em 3D" /></div>
+              <div class="product-card__footer"><h3>Cosplay e props</h3><span aria-hidden="true">↗</span></div>
+            </article>
+            <article class="product-card product-card--home">
+              <div class="product-card__media"><img class="product-card__image" src="assets/catalog/peca-tecnica-gamer.png" alt="Peça mecânica técnica impressa em 3D" /></div>
+              <div class="product-card__footer"><h3>Peças técnicas</h3><span aria-hidden="true">↗</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>
