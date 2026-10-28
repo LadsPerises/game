@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="pt-AO">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#070914" />
+    <meta name="description" content="PopUP 3D Angola — imprimimos o teu mundo em 3D." />
+    <title>PopUP 3D Angola — Impressão 3D</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" href="assets/popup3d-logo.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="hero" aria-label="PopUP 3D Angola">
+      <div class="hero__background" aria-hidden="true"></div>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <header class="navigation">
+        <a class="brand" href="#inicio" aria-label="PopUP 3D Angola, início">
+          <img src="assets/popup3d-logo.png" alt="PopUP 3D Angola" />
+        </a>
+        <nav aria-label="Navegação principal">
+          <a class="is-active" href="#catalogo">Catálogo</a>
+          <a href="#modificacoes">Modificações</a>
+          <a href="#projectos">Projectos</a>
+          <a href="#contacto">Contacto</a>
+        </nav>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
+          <span></span><span></span>
+        </button>
+      </header>
+
+      <section class="hero__content" id="inicio">
+        <div class="copy">
+          <p class="eyebrow">Impressão 3D em Angola</p>
+          <h1>Imprimimos<br />o <span>teu mundo</span><br />em 3D</h1>
+          <p class="intro">Figuras colecionáveis, acessórios gaming, peças personalizadas e projectos à medida.</p>
+          <div class="actions">
+            <button class="button button--primary" type="button" data-message="O catálogo será ligado na próxima etapa.">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 7h12l1 13H5L6 7Zm3 0a3 3 0 0 1 6 0" /></svg>
+              Ver catálogo <span aria-hidden="true">↗</span>
+            </button>
+            <button class="button button--secondary" type="button" data-message="O pedido de orçamento será ligado na próxima etapa.">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6V3Zm8 0v5h5M9 13h6M9 17h6" /></svg>
+              Pedir orçamento <span aria-hidden="true">↗</span>
+            </button>
+          </div>
+          <p class="scene-label" aria-live="polite"><span class="pulse"></span><span id="scene-name">Impressora 3D em ação</span></p>
+        </div>
+
+        <div class="showcase" aria-label="Demonstração visual alternável">
+          <div class="showcase__glow" aria-hidden="true"></div>
+          <img class="product product--printer is-visible" src="assets/hero-printer.png" alt="Impressora 3D a imprimir um vaso decorativo" />
+          <img class="product product--robot" src="assets/hero-robot.png" alt="Boneco robótico colecionável impresso em 3D" />
+          <div class="scene-controls" role="tablist" aria-label="Escolher visual do hero">
+            <button class="scene-control is-current" type="button" role="tab" aria-selected="true" data-scene="printer">Impressora</button>
+            <button class="scene-control" type="button" role="tab" aria-selected="false" data-scene="robot">Boneco 3D</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="notice" role="status" aria-live="polite"></div>
+      <div class="hero__bottom-line" aria-hidden="true"></div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
