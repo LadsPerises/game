@@ -8,7 +8,8 @@
     <title>PopUP 3D Angola — Impressão 3D</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
     <link rel="icon" href="assets/popup3d-logo.png" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -26,6 +27,7 @@
           <a class="is-active" href="#catalogo">Catálogo</a>
           <a href="#modificacoes">Modificações</a>
           <a href="#projectos">Projectos</a>
+          <a href="#sobre">Sobre</a>
           <a href="#contacto">Contacto</a>
         </nav>
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
@@ -97,7 +99,88 @@
           </div>
         </div>
       </section>
+      <section class="about" id="sobre" aria-labelledby="about-title">
+        <div class="about__inner">
+          <div class="about__visual">
+            <p class="about__visual-label">Do digital ao real</p>
+            <img src="assets/hero-printer.png" alt="Impressora 3D a criar uma peça decorativa" loading="lazy" />
+            <div class="about__visual-note"><span>PopUP 3D · Angola</span><p>Cada peça começa com uma ideia.</p></div>
+          </div>
+          <div class="about__copy">
+            <p class="section-kicker">Sobre nós <i aria-hidden="true"></i></p>
+            <h2 id="about-title">As tuas ideias.<br />Uma nova <span>dimensão.</span></h2>
+            <p class="about__lead">Somos a PopUP 3D Angola. Juntamos criatividade, cultura gaming e impressão 3D para dar forma ao teu mundo.</p>
+            <p>De uma figura para a tua coleção a um acessório para o teu setup, exploramos as possibilidades da impressão 3D em peças com personalidade. Há espaço para o útil, para o inesperado e para aquela ideia que é só tua.</p>
+            <div class="about__detail">
+              <span aria-hidden="true">↗</span>
+              <div><h3>Feito à tua maneira</h3><p>Cores, formas e detalhes que tornam cada projecto mais teu.</p></div>
+            </div>
+            <a class="about__link" href="#catalogo">Explora o nosso universo <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+      </section>
     </main>
+    <section class="contact-cta" id="contacto" aria-labelledby="contact-title">
+      <div class="contact-cta__sky" aria-hidden="true"><span class="pixel-cloud pixel-cloud--one"></span><span class="pixel-cloud pixel-cloud--two"></span></div>
+      <div class="contact-cta__terrain" aria-hidden="true"><span></span><span></span><span></span></div>
+      <div class="contact-cta__inner">
+        <div class="contact-cta__intro">
+          <p class="contact-cta__eyebrow"><span aria-hidden="true">◆</span> O próximo nível começa aqui</p>
+          <h2 id="contact-title">Tens uma ideia<br />para <span>construir?</span></h2>
+          <p>Conta-nos o que imaginaste. Vamos transformar a tua ideia num projecto 3D.</p>
+          <div class="contact-cta__characters">
+            <img src="assets/personagens-voxel-contato.png" alt="Criador em estilo de blocos com portátil e um pequeno robô companheiro" loading="lazy" />
+            <div class="contact-cta__pixel-art" aria-hidden="true"><span class="pixel-star">✦</span><span class="pixel-cube"></span><span class="pixel-cube pixel-cube--small"></span></div>
+          </div>
+        </div>
+        <form class="request-form">
+          <div class="request-form__heading"><span class="form-icon" aria-hidden="true">✚</span><div><p>Quadro de criação</p><span>Preenche os detalhes do teu pedido</span></div></div>
+          <label for="request-name">Como te chamamos?</label>
+          <input id="request-name" name="name" autocomplete="name" placeholder="O teu nome" required />
+          <label for="request-contact">Contacto</label>
+          <input id="request-contact" name="contact" autocomplete="tel" placeholder="Telefone ou e-mail" required />
+          <label for="request-type">O que queres criar?</label>
+          <select id="request-type" name="type" required>
+            <option value="" disabled selected>Escolhe uma categoria</option>
+            <option>Figura ou coleccionável</option>
+            <option>Acessório gaming</option>
+            <option>Cosplay ou prop</option>
+            <option>Peça técnica</option>
+            <option>Outra ideia</option>
+          </select>
+          <label for="request-idea">Descreve a tua ideia</label>
+          <textarea id="request-idea" name="idea" rows="3" placeholder="Forma, cor, tamanho ou detalhes importantes…" required></textarea>
+          <button class="request-form__submit" type="submit">Preparar pedido <span aria-hidden="true">↗</span></button>
+          <p class="request-form__feedback" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__brand-block">
+          <a class="footer__brand" href="#inicio" aria-label="PopUP 3D Angola — voltar ao início">
+            <img src="assets/popup3d-logo.png" alt="PopUP 3D Angola" loading="lazy" />
+          </a>
+          <p>Imprimimos o teu mundo em 3D.</p>
+        </div>
+        <div class="footer__column">
+          <h2>Explora</h2>
+          <a href="#catalogo">Catálogo</a>
+          <a href="#sobre">Sobre nós</a>
+        </div>
+        <div class="footer__column">
+          <h2>O universo 3D</h2>
+          <a href="#catalogo">Figuras e coleccionáveis</a>
+          <a href="#catalogo">Acessórios gaming</a>
+          <a href="#catalogo">Cosplay e props</a>
+        </div>
+        <a class="footer__back-top" href="#inicio">Voltar ao topo <span aria-hidden="true">↑</span></a>
+      </div>
+      <div class="footer__bottom">
+        <p>© <span id="current-year">2026</span> PopUP 3D Angola</p>
+        <p>Feito com criatividade em Angola <span aria-hidden="true">✦</span></p>
+      </div>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
