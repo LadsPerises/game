@@ -9,5 +9,8 @@
 .ui-icon--sparkles { --icon: url("assets/lucide-sparkles.svg"); }
 .ui-icon--plus { --icon: url("assets/lucide-plus.svg"); }
 .ui-icon--star { --icon: url("assets/lucide-star.svg"); }
+.ui-icon--diamond { --icon: url("assets/lucide-diamond.svg"); }
+.ui-icon--hexagon { --icon: url("assets/lucide-hexagon.svg"); }
+.ui-icon--asterisk { --icon: url("assets/lucide-asterisk.svg"); }
 .about-discover__icon .ui-icon { height: 32px; width: 32px; }
 .pixel-star .ui-icon { vertical-align: 0; }
