@@ -1,0 +1,13 @@
+/* Lucide icons: local SVG masks keep the same shape on every device. */
+.ui-icon { background: currentColor; display: inline-block; flex: 0 0 auto; height: 1.15em; width: 1.15em; vertical-align: -.15em; -webkit-mask: var(--icon) center / contain no-repeat; mask: var(--icon) center / contain no-repeat; }
+.ui-icon--arrow-up-right { --icon: url("assets/lucide-arrow-up-right.svg"); }
+.ui-icon--arrow-up { --icon: url("assets/lucide-arrow-up.svg"); }
+.ui-icon--arrow-down { --icon: url("assets/lucide-arrow-down.svg"); }
+.ui-icon--box { --icon: url("assets/lucide-box.svg"); }
+.ui-icon--gamepad-2 { --icon: url("assets/lucide-gamepad-2.svg"); }
+.ui-icon--shield { --icon: url("assets/lucide-shield.svg"); }
+.ui-icon--sparkles { --icon: url("assets/lucide-sparkles.svg"); }
+.ui-icon--plus { --icon: url("assets/lucide-plus.svg"); }
+.ui-icon--star { --icon: url("assets/lucide-star.svg"); }
+.about-discover__icon .ui-icon { height: 32px; width: 32px; }
+.pixel-star .ui-icon { vertical-align: 0; }
