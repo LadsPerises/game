@@ -1,6 +1,6 @@
 /* A quiet studio backdrop leaves the featured pieces in focus. */
 .hero__background {
-  background: #080912 url("assets/hero-estudio-gamer.png") center / cover no-repeat;
+  background: #080912 url("assets/hero-estudio-gamer.webp") center / cover no-repeat;
   transform: none;
 }
 .hero__overlay {

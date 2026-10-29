@@ -14,7 +14,7 @@
 .about-discover__icon { color: #e949e6; font-size: 32px; line-height: 1; }
 .about-discover__card h3 { font-size: clamp(15px, 1.35vw, 19px); line-height: 1.35; margin: 0; }
 .about-discover__arrow { color: #de65ee; font-size: 20px; margin-top: auto; align-self: end; }
-.about-discover__banner { align-items: center; background: linear-gradient(90deg, #090b16f5 0%, #100b1cc9 50%, #100b1c55), url("assets/hero-workshop-background.png") center / cover; border: 1px solid #aa52c74d; border-radius: 5px 24px 5px 24px; display: flex; justify-content: space-between; margin-top: 28px; min-height: 340px; overflow: hidden; padding: 35px clamp(24px, 5vw, 70px); position: relative; }
+.about-discover__banner { align-items: center; background: linear-gradient(90deg, #090b16f5 0%, #100b1cc9 50%, #100b1c55), url("assets/hero-workshop-background.webp") center / cover; border: 1px solid #aa52c74d; border-radius: 5px 24px 5px 24px; display: flex; justify-content: space-between; margin-top: 28px; min-height: 340px; overflow: hidden; padding: 35px clamp(24px, 5vw, 70px); position: relative; }
 .about-discover__banner-copy { flex: 1; position: relative; z-index: 1; }
 .about-discover__banner-copy > p { color: #e29af0; font-size: 11px; font-weight: 700; letter-spacing: .17em; margin: 0 0 18px; text-transform: uppercase; }
 .about-discover__banner h3 { color: white; font-size: clamp(22px, 2.6vw, 36px); line-height: 1.25; margin: 0 0 24px; }

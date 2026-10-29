@@ -1,20 +1,20 @@
 const products = [
-  { name: "Suporte para headset Creeper", category: "gaming", label: "Gaming", image: "creeper-headset-v2.png", description: "Um suporte inspirado no universo Minecraft para o teu headset." },
-  { name: "Dinossauro pixelado", category: "gaming", label: "Gaming", image: "dino-pixel-v2.png", description: "Uma peça decorativa inspirada nos jogos em pixels." },
-  { name: "Suporte para headset caveira", category: "gaming", label: "Gaming", image: "caveira-headset-v2.png", description: "Uma caveira geométrica para colocar o teu headset." },
-  { name: "Porta-incenso samurai", category: "utilidades", label: "Utilidades", image: "samurai-incenso-v2.png", description: "Uma peça decorativa inspirada num guerreiro samurai." },
-  { name: "Porta-canetas esfera", category: "utilidades", label: "Utilidades", image: "esfera-organizador-v2.png", description: "Um organizador para a secretária inspirado nos jogos Pokémon." },
-  { name: "Porta-chaves design", category: "utilidades", label: "Utilidades", image: "porta-chaves-design-v2.png", description: "Porta-chaves coloridos para quem gosta de criação digital." },
-  { name: "Dragão coleccionável", category: "figuras", label: "Figuras", image: "figura-dragao-gamer.png", description: "Uma figura de fantasia para dar vida à tua colecção." },
-  { name: "Dock para headset e comandos", category: "gaming", label: "Gaming", image: "dock-gamer-headset-comandos.png", description: "Um lugar para organizar os acessórios do teu setup." },
-  { name: "Suporte para comandos", category: "gaming", label: "Gaming", image: "suportes-comandos-gaming.png", description: "Mantém os teus comandos em destaque e organizados." },
-  { name: "Capacete sci-fi", category: "cosplay", label: "Cosplay e props", image: "capacete-cosplay-sci-fi.png", description: "Uma peça inspirada em universos futuristas." },
-  { name: "Conjunto mecânico", category: "tecnicas", label: "Peças técnicas", image: "peca-tecnica-gamer.png", description: "Uma ideia para projectos mecânicos e de simulação." },
-  { name: "Organizador de cabos", category: "utilidades", label: "Utilidades", image: "organizador-cabos-laranja.png", description: "Cabos sempre à mão e no seu lugar." },
-  { name: "Suporte para telemóvel", category: "utilidades", label: "Utilidades", image: "suporte-telemovel-ajustavel.png", description: "Um suporte prático para a tua secretária." },
-  { name: "Organizador de secretária", category: "utilidades", label: "Utilidades", image: "organizador-modular-secretaria.png", description: "Compartimentos para as pequenas coisas do dia a dia." },
-  { name: "Porta-chaves hexagonal", category: "utilidades", label: "Utilidades", image: "porta-chaves-hexagonal.png", description: "Um toque de cor para organizar as tuas chaves." },
-  { name: "Porta-joias em arco", category: "utilidades", label: "Utilidades", image: "porta-joias-arco.png", description: "Uma forma criativa de guardar os teus acessórios." }
+  { name: "Suporte para headset Creeper", category: "gaming", label: "Gaming", image: "creeper-headset-v2.webp", description: "Um suporte inspirado no universo Minecraft para o teu headset." },
+  { name: "Dinossauro pixelado", category: "gaming", label: "Gaming", image: "dino-pixel-v2.webp", description: "Uma peça decorativa inspirada nos jogos em pixels." },
+  { name: "Suporte para headset caveira", category: "gaming", label: "Gaming", image: "caveira-headset-v2.webp", description: "Uma caveira geométrica para colocar o teu headset." },
+  { name: "Porta-incenso samurai", category: "utilidades", label: "Utilidades", image: "samurai-incenso-v2.webp", description: "Uma peça decorativa inspirada num guerreiro samurai." },
+  { name: "Porta-canetas esfera", category: "utilidades", label: "Utilidades", image: "esfera-organizador-v2.webp", description: "Um organizador para a secretária inspirado nos jogos Pokémon." },
+  { name: "Porta-chaves design", category: "utilidades", label: "Utilidades", image: "porta-chaves-design-v2.webp", description: "Porta-chaves coloridos para quem gosta de criação digital." },
+  { name: "Dragão coleccionável", category: "figuras", label: "Figuras", image: "figura-dragao-gamer.webp", description: "Uma figura de fantasia para dar vida à tua colecção." },
+  { name: "Dock para headset e comandos", category: "gaming", label: "Gaming", image: "dock-gamer-headset-comandos.webp", description: "Um lugar para organizar os acessórios do teu setup." },
+  { name: "Suporte para comandos", category: "gaming", label: "Gaming", image: "suportes-comandos-gaming.webp", description: "Mantém os teus comandos em destaque e organizados." },
+  { name: "Capacete sci-fi", category: "cosplay", label: "Cosplay e props", image: "capacete-cosplay-sci-fi.webp", description: "Uma peça inspirada em universos futuristas." },
+  { name: "Conjunto mecânico", category: "tecnicas", label: "Peças técnicas", image: "peca-tecnica-gamer.webp", description: "Uma ideia para projectos mecânicos e de simulação." },
+  { name: "Organizador de cabos", category: "utilidades", label: "Utilidades", image: "organizador-cabos-laranja.webp", description: "Cabos sempre à mão e no seu lugar." },
+  { name: "Suporte para telemóvel", category: "utilidades", label: "Utilidades", image: "suporte-telemovel-ajustavel.webp", description: "Um suporte prático para a tua secretária." },
+  { name: "Organizador de secretária", category: "utilidades", label: "Utilidades", image: "organizador-modular-secretaria.webp", description: "Compartimentos para as pequenas coisas do dia a dia." },
+  { name: "Porta-chaves hexagonal", category: "utilidades", label: "Utilidades", image: "porta-chaves-hexagonal.webp", description: "Um toque de cor para organizar as tuas chaves." },
+  { name: "Porta-joias em arco", category: "utilidades", label: "Utilidades", image: "porta-joias-arco.webp", description: "Uma forma criativa de guardar os teus acessórios." }
 ];
 
 const filters = [...document.querySelectorAll(".filter")];

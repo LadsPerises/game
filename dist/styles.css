@@ -24,7 +24,7 @@ button { cursor: pointer; }
 .hero__overlay { position: absolute; inset: 0; }
 .hero__background {
   z-index: -3;
-  background: url("assets/hero-workshop-background.png") center / cover no-repeat;
+  background: url("assets/hero-workshop-background.webp") center / cover no-repeat;
   transform: scale(1.015);
 }
 .hero__overlay {
@@ -73,7 +73,7 @@ h1 { font-family: Sora, Inter, sans-serif; font-size: clamp(46px, 4.35vw, 70px);
 
 .catalog { background: #070914; min-height: 100svh; overflow: hidden; position: relative; }
 .catalog::after { background: linear-gradient(180deg, rgba(7, 9, 20, .34), rgba(7, 9, 20, .89) 72%, #070914); content: ""; inset: 0; position: absolute; }
-.catalog__backdrop { background: url("assets/catalog-gaming-workshop-background.png") center / cover no-repeat; filter: saturate(.9) brightness(.7); inset: 0; opacity: .94; position: absolute; }
+.catalog__backdrop { background: url("assets/catalog-gaming-workshop-background.webp") center / cover no-repeat; filter: saturate(.9) brightness(.7); inset: 0; opacity: .94; position: absolute; }
 .catalog__inner { margin: auto; padding: clamp(82px, 10vh, 128px) 0 clamp(92px, 11vh, 148px); position: relative; width: min(1440px, calc(100% - 9vw)); z-index: 1; }
 .catalog__heading { margin-bottom: clamp(36px, 5vh, 58px); }
 .section-kicker { align-items: center; color: #d8d5e0; display: flex; font-size: 13px; font-weight: 700; gap: 13px; letter-spacing: .26em; margin: 0 0 28px; text-transform: uppercase; }

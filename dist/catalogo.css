@@ -17,8 +17,8 @@ button { cursor: pointer; }
 .shop-hero { background: #080913; border-bottom: 1px solid #b246d133; isolation: isolate; overflow: hidden; position: relative; }
 .shop-hero__scenes { inset: 0; position: absolute; z-index: -2; }
 .shop-hero__scene { background-position: center; background-size: cover; inset: 0; opacity: 0; position: absolute; transition: opacity 1.5s ease-in-out; }
-.shop-hero__scene--one { background-image: url("assets/catalogo-hero-figura-realista.png"); }
-.shop-hero__scene--two { background-image: url("assets/catalogo-hero-setup-realista.png"); }
+.shop-hero__scene--one { background-image: url("assets/catalogo-hero-figura-realista.webp"); }
+.shop-hero__scene--two { background-image: url("assets/catalogo-hero-setup-realista.webp"); }
 .shop-hero__scene.is-visible { opacity: 1; }
 .shop-hero::after { background: linear-gradient(90deg, #080913e8 0%, #080913a8 35%, #08091320 72%), linear-gradient(0deg, #08091385, transparent 45%); content: ""; inset: 0; position: absolute; z-index: -1; }
 .shop-hero__inner { align-items: center; display: flex; margin: auto; min-height: 500px; padding: 90px 0; width: min(1400px, calc(100% - 9vw)); }
