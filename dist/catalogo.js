@@ -1,4 +1,10 @@
 const products = [
+  { name: "Suporte para headset Creeper", category: "gaming", label: "Gaming", image: "creeper-headset-v2.png", description: "Um suporte inspirado no universo Minecraft para o teu headset." },
+  { name: "Dinossauro pixelado", category: "gaming", label: "Gaming", image: "dino-pixel-v2.png", description: "Uma peça decorativa inspirada nos jogos em pixels." },
+  { name: "Suporte para headset caveira", category: "gaming", label: "Gaming", image: "caveira-headset-v2.png", description: "Uma caveira geométrica para colocar o teu headset." },
+  { name: "Porta-incenso samurai", category: "utilidades", label: "Utilidades", image: "samurai-incenso-v2.png", description: "Uma peça decorativa inspirada num guerreiro samurai." },
+  { name: "Porta-canetas esfera", category: "utilidades", label: "Utilidades", image: "esfera-organizador-v2.png", description: "Um organizador para a secretária inspirado nos jogos Pokémon." },
+  { name: "Porta-chaves design", category: "utilidades", label: "Utilidades", image: "porta-chaves-design-v2.png", description: "Porta-chaves coloridos para quem gosta de criação digital." },
   { name: "Dragão coleccionável", category: "figuras", label: "Figuras", image: "figura-dragao-gamer.png", description: "Uma figura de fantasia para dar vida à tua colecção." },
   { name: "Dock para headset e comandos", category: "gaming", label: "Gaming", image: "dock-gamer-headset-comandos.png", description: "Um lugar para organizar os acessórios do teu setup." },
   { name: "Suporte para comandos", category: "gaming", label: "Gaming", image: "suportes-comandos-gaming.png", description: "Mantém os teus comandos em destaque e organizados." },

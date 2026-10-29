@@ -1,30 +1,28 @@
-const productScenes = {
-  printer: { label: "Impressora 3D em ação", selector: ".product--printer" },
-  robot: { label: "Boneco 3D colecionável", selector: ".product--robot" }
-};
-
-let activeScene = "printer";
+const productScenes = [...document.querySelectorAll(".showcase .product")];
+let activeScene = 0;
 let rotationTimer;
-const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const heroMotionPreference = window.matchMedia("(prefers-reduced-motion: reduce)");
+const heroDesktop = window.matchMedia("(min-width: 901px)");
 
 function showScene(nextScene) {
   if (!productScenes[nextScene] || nextScene === activeScene) return;
-  document.querySelector(productScenes[activeScene].selector).classList.remove("is-visible");
+  productScenes[activeScene].classList.remove("is-visible");
   activeScene = nextScene;
-  document.querySelector(productScenes[activeScene].selector).classList.add("is-visible");
+  productScenes[activeScene].classList.add("is-visible");
 }
 
 function startRotation() {
-  if (prefersReducedMotion) return;
-  if (document.hidden) return;
   window.clearInterval(rotationTimer);
-  rotationTimer = window.setInterval(() => showScene(activeScene === "printer" ? "robot" : "printer"), 6200);
+  if (heroMotionPreference.matches || !heroDesktop.matches || document.hidden || productScenes.length < 2) return;
+  rotationTimer = window.setInterval(() => showScene((activeScene + 1) % productScenes.length), 6200);
 }
 
 document.addEventListener("visibilitychange", () => {
   if (document.hidden) window.clearInterval(rotationTimer);
   else startRotation();
 });
+heroMotionPreference.addEventListener("change", startRotation);
+heroDesktop.addEventListener("change", startRotation);
 
 const menuButton = document.querySelector(".menu-toggle");
 const navigation = document.querySelector("nav");
@@ -109,11 +107,18 @@ requestForm.addEventListener("submit", async (event) => {
     `Ideia: ${values.get("idea")}`
   ].join("\n");
   const feedback = requestForm.querySelector(".request-form__feedback");
+  const fallback = requestForm.querySelector(".request-form__fallback");
+  const fallbackText = requestForm.querySelector("#request-copy");
 
   try {
     await navigator.clipboard.writeText(request);
+    fallback.hidden = true;
     feedback.textContent = "Pedido copiado. Já podes colá-lo na tua mensagem.";
   } catch {
-    feedback.textContent = "O navegador não permitiu copiar. Selecciona e copia os dados do formulário.";
+    fallbackText.value = request;
+    fallback.hidden = false;
+    feedback.textContent = "Não foi possível copiar automaticamente. Selecciona e copia o texto abaixo.";
+    fallbackText.focus();
+    fallbackText.select();
   }
 });

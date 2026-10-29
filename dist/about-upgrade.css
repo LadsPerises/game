@@ -1,0 +1,26 @@
+.about-discover { width: min(1320px, calc(100% - 9vw)); margin: auto; padding: clamp(80px, 9vw, 130px) 0; }
+.about-discover__heading { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr); align-items: end; gap: clamp(35px, 6vw, 90px); text-align: left; margin: 0 0 50px; }
+.about-discover__eyebrow { color: #de64e9; font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 18px; }
+.about .about-discover__heading h2 { font-size: clamp(30px, 3.9vw, 53px); line-height: 1.2; margin: 0; }
+.about-discover__heading > p:last-child { color: #bcb5c7; font-size: 16px; line-height: 1.7; margin: 18px auto 0; max-width: 580px; }
+.about-discover__story { max-width: 520px; margin: 0; padding-left: 24px; border-left: 2px solid #bd43e9; color: #c9c2d1; font-size: clamp(15px, 1.2vw, 17px); line-height: 1.75; }
+.about-discover__story p { margin: 0 0 14px; }
+.about-discover__story p:last-child { margin-bottom: 0; }
+.about-discover__grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; }
+.about-discover__card { background: linear-gradient(145deg, #181124, #0e0c1a); border: 1px solid #8251a44a; border-radius: 4px 18px 4px 18px; color: #f6f0fa; display: flex; flex-direction: column; gap: 18px; min-height: 205px; padding: 26px; position: relative; text-decoration: none; transition: border-color .25s, transform .25s, background .25s; }
+.about-discover__card::before { border-left: 2px solid #ca42f1; border-top: 2px solid #ca42f1; content: ""; height: 15px; left: 10px; position: absolute; top: 10px; width: 15px; }
+.about-discover__card:hover, .about-discover__card:focus-visible { border-color: #e448e4; transform: translateY(-5px); background: linear-gradient(145deg, #2c153b, #110e1e); }
+.about-discover__card:focus-visible, .about-discover__banner a:focus-visible { outline: 2px solid white; outline-offset: 4px; }
+.about-discover__icon { color: #e949e6; font-size: 32px; line-height: 1; }
+.about-discover__card h3 { font-size: clamp(15px, 1.35vw, 19px); line-height: 1.35; margin: 0; }
+.about-discover__arrow { color: #de65ee; font-size: 20px; margin-top: auto; align-self: end; }
+.about-discover__banner { align-items: center; background: linear-gradient(90deg, #090b16f5 0%, #100b1cc9 50%, #100b1c55), url("assets/hero-workshop-background.png") center / cover; border: 1px solid #aa52c74d; border-radius: 5px 24px 5px 24px; display: flex; justify-content: space-between; margin-top: 28px; min-height: 340px; overflow: hidden; padding: 35px clamp(24px, 5vw, 70px); position: relative; }
+.about-discover__banner-copy { flex: 1; position: relative; z-index: 1; }
+.about-discover__banner-copy > p { color: #e29af0; font-size: 11px; font-weight: 700; letter-spacing: .17em; margin: 0 0 18px; text-transform: uppercase; }
+.about-discover__banner h3 { color: white; font-size: clamp(22px, 2.6vw, 36px); line-height: 1.25; margin: 0 0 24px; }
+.about-discover__banner a { border-bottom: 1px solid #e454e9; color: white; display: inline-flex; gap: 20px; font-size: 13px; font-weight: 700; padding-bottom: 7px; text-decoration: none; }
+.about-discover__banner a span { color: #e454e9; }
+.about-discover__banner img { align-self: end; width: min(45%, 420px); max-height: 330px; object-fit: contain; filter: drop-shadow(0 15px 24px #000a); }
+@media (max-width: 900px) { .about-discover { width: min(100% - 40px, 700px); padding: 75px 0 85px; } .about-discover__heading { grid-template-columns: 1fr; gap: 24px; } .about-discover__story { max-width: 650px; } .about-discover__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 480px) { .about-discover__heading { margin-bottom: 30px; } .about-discover__card { min-height: 165px; padding: 20px 16px; gap: 12px; } .about-discover__card h3 { font-size: 14px; } .about-discover__banner { min-height: 260px; padding: 24px; align-items: flex-start; } .about-discover__banner img { width: 50%; position: absolute; right: -3%; bottom: 0; opacity: .8; } .about-discover__banner-copy { max-width: 72%; } }
+@media (prefers-reduced-motion: reduce) { .about-discover__card { transition: none; } }

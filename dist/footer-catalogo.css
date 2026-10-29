@@ -1,0 +1,26 @@
+.footer { background: #05060e; border-top: 1px solid #b83be43b; position: relative; }
+.footer::before { background: linear-gradient(90deg, transparent, #a832ff, #ed20d3, #ff7938, transparent); content: ""; height: 1px; left: 0; opacity: .7; position: absolute; top: -1px; width: 100%; }
+.footer__inner { align-items: start; display: grid; gap: 35px; grid-template-columns: 1.4fr 1fr 1.3fr auto; margin: auto; padding: 58px 0 48px; width: min(1320px, calc(100% - 9vw)); }
+.footer__brand { display: block; width: 82px; }
+.footer__brand img { display: block; width: 100%; filter: drop-shadow(0 4px 14px #d51bd433); }
+.footer__brand-block p { color: #a9a5b4; font-size: 13px; margin: 14px 0 0; }
+.footer__column { display: grid; gap: 12px; }
+.footer__column h2 { color: #f2eef6; font-size: 12px; letter-spacing: .13em; margin: 5px 0 6px; text-transform: uppercase; }
+.footer__column a { color: #aaa6b5; font-size: 13px; text-decoration: none; transition: color .2s; }
+.footer__column a:hover { color: #ed52e4; }
+.footer__back-top { align-items: center; color: #dbd5e2; display: flex; font-size: 12px; font-weight: 800; gap: 12px; text-decoration: none; text-transform: uppercase; }
+.footer__back-top span { align-items: center; border: 1px solid #b845e6; border-radius: 50%; color: #ef55e2; display: inline-flex; height: 34px; justify-content: center; transition: transform .2s; width: 34px; }
+.footer__back-top:hover span { transform: translateY(-3px); }
+.footer__bottom { align-items: center; border-top: 1px solid #ffffff12; color: #777482; display: flex; font-size: 11px; justify-content: space-between; margin: auto; padding: 17px 0 21px; width: min(1320px, calc(100% - 9vw)); }
+.footer__bottom p { margin: 0; }
+.footer__bottom span { color: #df43de; }
+@media (max-width: 900px) {
+  .footer__inner { grid-template-columns: 1fr 1fr; width: min(100% - 40px, 700px); }
+  .footer__back-top { justify-self: start; }
+  .footer__bottom { width: min(100% - 40px, 700px); }
+}
+@media (max-width: 480px) {
+  .footer__inner { gap: 30px 20px; padding: 42px 0 34px; }
+  .footer__brand-block { grid-column: 1 / -1; }
+  .footer__bottom { align-items: flex-start; flex-direction: column; gap: 8px; }
+}

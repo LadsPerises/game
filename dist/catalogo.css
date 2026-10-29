@@ -17,12 +17,24 @@ button { cursor: pointer; }
 .shop-hero { background: #080913; border-bottom: 1px solid #b246d133; isolation: isolate; overflow: hidden; position: relative; }
 .shop-hero__scenes { inset: 0; position: absolute; z-index: -2; }
 .shop-hero__scene { background-position: center; background-size: cover; inset: 0; opacity: 0; position: absolute; transition: opacity 1.5s ease-in-out; }
-.shop-hero__scene--one { background-image: url("assets/catalogo-hero-dragao.png"); }
-.shop-hero__scene--two { background-image: url("assets/catalogo-hero-gaming.png"); }
+.shop-hero__scene--one { background-image: url("assets/catalogo-hero-figura-realista.png"); }
+.shop-hero__scene--two { background-image: url("assets/catalogo-hero-setup-realista.png"); }
 .shop-hero__scene.is-visible { opacity: 1; }
 .shop-hero::after { background: linear-gradient(90deg, #080913e8 0%, #080913a8 35%, #08091320 72%), linear-gradient(0deg, #08091385, transparent 45%); content: ""; inset: 0; position: absolute; z-index: -1; }
 .shop-hero__inner { align-items: center; display: flex; margin: auto; min-height: 500px; padding: 90px 0; width: min(1400px, calc(100% - 9vw)); }
 .shop-hero__copy { position: relative; z-index: 1; }
+.shop-hero__copy { max-width: 640px; }
+.shop-hero .shop-hero__inner { min-height: clamp(470px, 55vw, 610px); }
+.shop-hero .shop-hero__copy h1 { font-size: clamp(40px, 4.5vw, 64px); line-height: 1.14; }
+.shop-hero .shop-hero__copy > p { max-width: 470px; }
+@media (max-width: 900px) {
+  .shop-hero .shop-hero__inner { min-height: 390px; display: flex; }
+  .shop-hero__scene { background-position: 68% center; }
+}
+@media (max-width: 620px) {
+  .shop-hero .shop-hero__inner { min-height: 360px; padding: 64px 0; }
+  .shop-hero .shop-hero__copy h1 { font-size: clamp(30px, 8vw, 44px); }
+}
 .eyebrow, .section-label { color: #c1b5cc; font-size: 11px; font-weight: 800; letter-spacing: .17em; margin: 0 0 24px; text-transform: uppercase; }.eyebrow span { color: #eb30e2; font-size: 21px; margin-right: 9px; vertical-align: -2px; }
 .shop-hero h1 { font: 800 clamp(48px, 6vw, 82px)/1.06 Sora, sans-serif; letter-spacing: -.06em; margin: 0; }.shop-hero h1 span { background: linear-gradient(100deg,#a94aff,#ec1acb,#ff8239); background-clip: text; -webkit-background-clip: text; color: transparent; }
 .shop-hero__copy > p { color: #c9c3d0; font-size: clamp(15px, 1.3vw, 18px); line-height: 1.7; max-width: 500px; margin: 22px 0 28px; }

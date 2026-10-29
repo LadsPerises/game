@@ -1,0 +1,28 @@
+/* Footer inspired by the four-column gaming template. */
+.footer { overflow: hidden; background: radial-gradient(ellipse at 5% 20%, #3c175b80, transparent 33%), radial-gradient(ellipse at 95% 100%, #81295435, transparent 30%), #080914; }
+.footer__inner { position: relative; grid-template-columns: 1.3fr .8fr 1fr 1.3fr; gap: clamp(28px, 4vw, 65px); padding-top: 76px; padding-bottom: 68px; }
+.footer__brand { width: 94px; }
+.footer__brand-block p { color: #b8b0c2; max-width: 200px; line-height: 1.7; }
+.footer__column h2, .footer__featured h2 { color: #f8f3fb; font: 800 12px/1.4 Sora, sans-serif; letter-spacing: .11em; margin: 5px 0 14px; text-transform: uppercase; }
+.footer__column h2::after, .footer__featured h2::after { background: linear-gradient(90deg, #b13cff, #f82abb, #ff8a3d); content: ""; display: block; height: 2px; margin-top: 12px; width: 35px; }
+.footer__column { align-content: start; gap: 14px; }
+.footer__column a { line-height: 1.5; }
+.footer__featured-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.footer__featured-grid a { background: #181322; border: 1px solid #a748d047; display: block; min-width: 0; overflow: hidden; transition: border-color .2s, transform .2s; }
+.footer__featured-grid a:hover, .footer__featured-grid a:focus-visible { border-color: #e85bea; transform: translateY(-3px); }
+.footer__featured-grid img { aspect-ratio: 1.35; display: block; object-fit: cover; width: 100%; }
+.footer__featured-grid a > span { align-items: center; color: #f4eefa; display: flex; font-size: 11px; font-weight: 700; justify-content: space-between; padding: 10px; }
+.footer__featured-grid b { color: #ed58e1; font-size: 14px; }
+.footer__bottom { padding: 18px 0; }
+.footer__bottom .footer__back-top { font-size: 11px; }
+.footer a:focus-visible { outline: 2px solid #ef79f2; outline-offset: 4px; }
+@media (max-width: 900px) {
+  .footer__inner { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  .footer__inner { gap: 32px 20px; padding: 48px 0 40px; }
+  .footer__brand-block, .footer__featured { grid-column: 1 / -1; }
+  .footer__featured-grid { max-width: 320px; }
+  .footer__bottom { align-items: flex-start; gap: 16px; }
+}
+@media (prefers-reduced-motion: reduce) { .footer__featured-grid a { transition: none; } }

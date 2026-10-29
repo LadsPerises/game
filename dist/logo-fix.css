@@ -1,0 +1,6 @@
+/* Keep the square image background out of the circular logo presentation. */
+.footer__brand img {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}

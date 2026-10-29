@@ -1,0 +1,42 @@
+/* Shared navigation inspired by the gaming template. */
+.navigation, .shop-header__inner {
+  height: 94px; width: min(1400px, calc(100% - 9vw));
+  display: grid; grid-template-columns: 1fr auto 1fr; gap: 28px; align-items: center;
+  border-bottom: 1px solid #df5df031;
+}
+.shop-header { background: #090914f2; }
+.navigation::before {
+  content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 100vw;
+  transform: translateX(-50%); background: #090914d9; z-index: -1; pointer-events: none;
+}
+.brand, .shop-brand { justify-self: start; }
+.brand img, .shop-brand img { width: 64px; height: 64px; }
+.navigation nav, .shop-nav {
+  display: flex; align-items: center; gap: clamp(20px, 2.6vw, 42px);
+  background: transparent; border: 0; border-radius: 0; padding: 0;
+}
+.navigation nav a, .shop-nav a {
+  background: none; border-radius: 0; color: #d4ccdc; font-family: "Chakra Petch", sans-serif;
+  font-size: 14px; font-weight: 700; letter-spacing: .06em; padding: 16px 0; text-transform: uppercase;
+}
+.navigation nav a:hover, .navigation nav a.is-active, .shop-nav a:hover, .shop-nav a.active { background: none; color: #fff; }
+.navigation nav a::after, .shop-nav a.active::after, .shop-nav a::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 6px; height: 2px;
+  background: linear-gradient(90deg, #b744ff, #ed2bd1, #ff8241); box-shadow: 0 0 10px #d633e788;
+  transform: scaleX(0); transform-origin: left; transition: transform .25s ease;
+}
+.navigation nav a:hover::after, .navigation nav a.is-active::after, .shop-nav a:hover::after, .shop-nav a.active::after { transform: scaleX(1); }
+.nav-cta, .header-cta { border-radius: 3px 12px 3px 12px; font-family: "Chakra Petch", sans-serif; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; }
+.nav-cta span, .header-cta span { border-left: 1px solid #ffffff6b; padding-left: 14px; }
+@media (max-width: 900px) {
+  .navigation, .shop-header__inner { display: flex; width: calc(100% - 36px); height: auto; min-height: 78px; justify-content: space-between; gap: 10px; }
+  .brand img, .shop-brand img { width: 56px; height: 56px; }
+  .navigation nav, .shop-nav { align-items: stretch; background: #12101e; border: 1px solid #b64dda55; border-radius: 4px 16px 4px 16px; flex-direction: column; gap: 2px; padding: 8px; }
+  .navigation nav { display: none; }
+  .navigation nav.is-open { display: flex; }
+  .navigation nav a, .shop-nav a { border-radius: 5px; font-size: 13px; padding: 12px 15px; }
+  .navigation nav a:hover, .navigation nav a.is-active, .shop-nav a:hover, .shop-nav a.active { background: #ffffff0b; }
+  .navigation nav a::after, .shop-nav a::after, .shop-nav a.active::after { left: 15px; right: auto; width: 28px; bottom: 5px; }
+  .menu-toggle, .has-shop-menu .shop-menu-toggle { border-radius: 3px 10px 3px 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .navigation nav a::after, .shop-nav a::after { transition: none; } }
