@@ -1,8 +1,6 @@
 /* A quiet studio backdrop leaves the featured pieces in focus. */
 .hero__background {
-  background: radial-gradient(ellipse at 75% 46%, #48204a 0%, #1e1029 27%, transparent 58%),
-              radial-gradient(ellipse at 90% 90%, #743a292e, transparent 40%),
-              linear-gradient(115deg, #080912 5%, #100b1a 60%, #17101c);
+  background: #080912 url("assets/hero-estudio-gamer.png") center / cover no-repeat;
   transform: none;
 }
 .hero__overlay {
@@ -12,14 +10,16 @@
 .hero::before { opacity: .55; }
 .hero__content { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(20px, 3vw, 55px); }
 .showcase { height: min(68vh, 650px); align-self: center; }
+.showcase[data-rotation="standby"] { visibility: hidden; }
 .showcase__glow { left: 15%; bottom: 7%; width: 70%; height: 24%; background: radial-gradient(ellipse, #da35c74a, #9239d51f 44%, transparent 70%); filter: blur(22px); }
 .showcase .product { inset: 3% 5% 8%; height: 89%; width: 90%; max-width: none; max-height: none; object-fit: contain; object-position: center; filter: drop-shadow(0 24px 24px #0008); transform: translate3d(16px, 4px, 0) scale(.98); transition: opacity .9s ease, transform 1s ease; }
 .showcase .product.is-visible { transform: translate3d(0, 0, 0) scale(1); animation: hero-piece-float 7s ease-in-out 1s infinite; }
+.showcase[data-rotation="standby"] .product, .showcase[data-rotation="standby"] .showcase__glow { animation: none; }
 @keyframes hero-piece-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -5px; } }
 @media (max-width: 900px) {
   .hero__content { display: block; }
   .showcase { display: none; }
-  .hero__background { background: radial-gradient(ellipse at 85% 35%, #48204a70, transparent 50%), linear-gradient(145deg, #090914, #17101f); }
+  .hero__background { background-position: 61% center; }
   .hero__overlay { background: linear-gradient(180deg, #08091240, #080912b3); }
 }
 @media (prefers-reduced-motion: reduce) {

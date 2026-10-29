@@ -13,7 +13,7 @@ function showScene(nextScene) {
 
 function startRotation() {
   window.clearInterval(rotationTimer);
-  if (heroMotionPreference.matches || !heroDesktop.matches || document.hidden || productScenes.length < 2) return;
+  if (document.querySelector('.showcase')?.dataset.rotation === 'standby' || heroMotionPreference.matches || !heroDesktop.matches || document.hidden || productScenes.length < 2) return;
   rotationTimer = window.setInterval(() => showScene((activeScene + 1) % productScenes.length), 6200);
 }
 
