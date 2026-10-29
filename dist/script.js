@@ -31,7 +31,10 @@ const navigation = document.querySelector("nav");
 menuButton.addEventListener("click", () => {
   const isOpen = navigation.classList.toggle("is-open");
   menuButton.setAttribute("aria-expanded", String(isOpen));
+  menuButton.setAttribute("aria-label", isOpen ? "Fechar menu" : "Abrir menu");
 });
+navigation.addEventListener("click", (event) => { if (event.target.closest("a")) { navigation.classList.remove("is-open"); menuButton.setAttribute("aria-expanded", "false"); menuButton.setAttribute("aria-label", "Abrir menu"); } });
+document.addEventListener("keydown", (event) => { if (event.key === "Escape" && navigation.classList.contains("is-open")) { navigation.classList.remove("is-open"); menuButton.setAttribute("aria-expanded", "false"); menuButton.setAttribute("aria-label", "Abrir menu"); menuButton.focus(); } });
 
 let noticeTimer;
 document.querySelectorAll("[data-message]").forEach((button) => {
@@ -89,6 +92,10 @@ gameScene.addEventListener("pointerleave", () => {
 updateGameScene();
 
 const requestForm = document.querySelector(".request-form");
+const requestedProduct = new URLSearchParams(window.location.search).get("produto");
+if (requestedProduct) {
+  document.querySelector("#request-idea").value = `Gostaria de saber mais sobre: ${requestedProduct}.`;
+}
 requestForm.addEventListener("submit", async (event) => {
   event.preventDefault();
   if (!requestForm.reportValidity()) return;

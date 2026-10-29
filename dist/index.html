@@ -21,15 +21,16 @@
 
       <header class="navigation">
         <a class="brand" href="#inicio" aria-label="PopUP 3D Angola, início">
-          <img src="assets/popup3d-logo.png" alt="PopUP 3D Angola" />
+          <img src="assets/popup3d-logo.png" alt="" /><span class="brand__text">PopUP <strong>3D</strong><small>ANGOLA</small></span>
         </a>
         <nav aria-label="Navegação principal">
-          <a class="is-active" href="#catalogo">Catálogo</a>
-          <a href="#modificacoes">Modificações</a>
-          <a href="#projectos">Projectos</a>
+          <a class="is-active" href="#inicio" aria-current="page">Início</a>
+          <a href="catalogo.html">Catálogo</a>
           <a href="#sobre">Sobre</a>
           <a href="#contacto">Contacto</a>
+          <a class="nav-mobile-cta" href="#contacto">Pedir orçamento ↗</a>
         </nav>
+        <a class="nav-cta" href="#contacto">Pedir orçamento <span aria-hidden="true">↗</span></a>
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false">
           <span></span><span></span>
         </button>
@@ -44,14 +45,14 @@
           </h1>
           <p class="intro">Figuras colecionáveis, acessórios gaming, peças personalizadas e projectos à medida.</p>
           <div class="actions">
-            <button class="button button--primary" type="button" data-message="O catálogo será ligado na próxima etapa.">
+            <a class="button button--primary" href="catalogo.html">
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 7h12l1 13H5L6 7Zm3 0a3 3 0 0 1 6 0" /></svg>
               Ver catálogo <span aria-hidden="true">↗</span>
-            </button>
-            <button class="button button--secondary" type="button" data-message="O pedido de orçamento será ligado na próxima etapa.">
+            </a>
+            <a class="button button--secondary" href="#contacto">
               <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6V3Zm8 0v5h5M9 13h6M9 17h6" /></svg>
               Pedir orçamento <span aria-hidden="true">↗</span>
-            </button>
+            </a>
           </div>
         </div>
 
@@ -78,23 +79,23 @@
           <div class="catalog__grid">
             <article class="product-card product-card--figures">
               <div class="product-card__media"><img class="product-card__image" src="assets/catalog/figura-dragao-gamer.png" alt="Figura de dragão colecionável impressa em 3D" /></div>
-              <div class="product-card__footer"><h3>Figuras</h3><span aria-hidden="true">↗</span></div>
+              <a class="product-card__footer" href="catalogo.html?categoria=figuras"><h3>Figuras</h3><span aria-hidden="true">↗</span></a>
             </article>
             <article class="product-card product-card--accessories">
               <div class="product-card__media"><img class="product-card__image" src="assets/catalog/dock-gamer-headset-comandos.png" alt="Dock gamer para headset e comandos impresso em 3D" /></div>
-              <div class="product-card__footer"><h3>Setup gamer</h3><span aria-hidden="true">↗</span></div>
+              <a class="product-card__footer" href="catalogo.html?categoria=gaming"><h3>Setup gamer</h3><span aria-hidden="true">↗</span></a>
             </article>
             <article class="product-card product-card--functional">
               <div class="product-card__media"><img class="product-card__image" src="assets/catalog/suportes-comandos-gaming.png" alt="Suportes para comandos gaming impressos em 3D" /></div>
-              <div class="product-card__footer"><h3>Acessórios gaming</h3><span aria-hidden="true">↗</span></div>
+              <a class="product-card__footer" href="catalogo.html?categoria=gaming"><h3>Acessórios gaming</h3><span aria-hidden="true">↗</span></a>
             </article>
             <article class="product-card product-card--custom">
               <div class="product-card__media"><img class="product-card__image" src="assets/catalog/capacete-cosplay-sci-fi.png" alt="Capacete sci-fi de cosplay impresso em 3D" /></div>
-              <div class="product-card__footer"><h3>Cosplay e props</h3><span aria-hidden="true">↗</span></div>
+              <a class="product-card__footer" href="catalogo.html?categoria=cosplay"><h3>Cosplay e props</h3><span aria-hidden="true">↗</span></a>
             </article>
             <article class="product-card product-card--home">
               <div class="product-card__media"><img class="product-card__image" src="assets/catalog/peca-tecnica-gamer.png" alt="Peça mecânica técnica impressa em 3D" /></div>
-              <div class="product-card__footer"><h3>Peças técnicas</h3><span aria-hidden="true">↗</span></div>
+              <a class="product-card__footer" href="catalogo.html?categoria=tecnicas"><h3>Peças técnicas</h3><span aria-hidden="true">↗</span></a>
             </article>
           </div>
         </div>
@@ -115,7 +116,7 @@
               <span aria-hidden="true">↗</span>
               <div><h3>Feito à tua maneira</h3><p>Cores, formas e detalhes que tornam cada projecto mais teu.</p></div>
             </div>
-            <a class="about__link" href="#catalogo">Explora o nosso universo <span aria-hidden="true">↗</span></a>
+            <a class="about__link" href="catalogo.html">Explora o nosso universo <span aria-hidden="true">↗</span></a>
           </div>
         </div>
       </section>
@@ -125,7 +126,6 @@
       <div class="contact-cta__terrain" aria-hidden="true"><span></span><span></span><span></span></div>
       <div class="contact-cta__inner">
         <div class="contact-cta__intro">
-          <p class="contact-cta__eyebrow"><span aria-hidden="true">◆</span> O próximo nível começa aqui</p>
           <h2 id="contact-title">Tens uma ideia<br />para <span>construir?</span></h2>
           <p>Conta-nos o que imaginaste. Vamos transformar a tua ideia num projecto 3D.</p>
           <div class="contact-cta__characters">
@@ -165,14 +165,14 @@
         </div>
         <div class="footer__column">
           <h2>Explora</h2>
-          <a href="#catalogo">Catálogo</a>
+          <a href="catalogo.html">Catálogo</a>
           <a href="#sobre">Sobre nós</a>
         </div>
         <div class="footer__column">
           <h2>O universo 3D</h2>
-          <a href="#catalogo">Figuras e coleccionáveis</a>
-          <a href="#catalogo">Acessórios gaming</a>
-          <a href="#catalogo">Cosplay e props</a>
+          <a href="catalogo.html?categoria=figuras">Figuras e coleccionáveis</a>
+          <a href="catalogo.html?categoria=gaming">Acessórios gaming</a>
+          <a href="catalogo.html?categoria=cosplay">Cosplay e props</a>
         </div>
         <a class="footer__back-top" href="#inicio">Voltar ao topo <span aria-hidden="true">↑</span></a>
       </div>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="pt-AO">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#070914" />
+  <meta name="description" content="Explora o catálogo de impressão 3D da PopUP 3D Angola." />
+  <title>Catálogo — PopUP 3D Angola</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" href="assets/popup3d-logo.png" />
+  <link rel="stylesheet" href="catalogo.css" />
+</head>
+<body>
+  <header class="shop-header">
+    <div class="shop-header__inner">
+      <a class="shop-brand" href="index.html#inicio" aria-label="PopUP 3D Angola — início"><img src="assets/popup3d-logo.png" alt="" /><span class="shop-brand__text">PopUP <strong>3D</strong><small>ANGOLA</small></span></a>
+      <nav class="shop-nav" id="shop-navigation" aria-label="Navegação principal">
+        <a href="index.html">Início</a><a class="active" href="catalogo.html" aria-current="page">Catálogo</a><a href="index.html#sobre">Sobre</a><a href="index.html#contacto">Contacto</a>
+        <a class="shop-nav__cta" href="index.html#contacto">Pedir orçamento <span aria-hidden="true">↗</span></a>
+      </nav>
+      <a class="header-cta" href="index.html#contacto">Pedir orçamento <span aria-hidden="true">↗</span></a>
+      <button class="shop-menu-toggle" type="button" aria-controls="shop-navigation" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span></button>
+    </div>
+  </header>
+  <main>
+    <section class="shop-hero">
+      <div class="shop-hero__scenes" aria-hidden="true"><div class="shop-hero__scene shop-hero__scene--one is-visible"></div><div class="shop-hero__scene shop-hero__scene--two"></div></div>
+      <div class="shop-hero__inner">
+        <div class="shop-hero__copy">
+        <h1>Ideias que<br /><span>ganham forma.</span></h1>
+        <p>Explora figuras, acessórios gaming e peças que dão vida ao teu mundo.</p>
+        <a href="#produtos" class="hero-link">Explorar produtos <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+    <section class="shop-content" id="produtos" aria-labelledby="products-title">
+      <div class="shop-content__top">
+        <div><p class="section-label">O NOSSO UNIVERSO <span></span></p><h2 id="products-title">Explora o catálogo<span>.</span></h2><p class="shop-subtitle">Encontra inspiração para o teu próximo projecto.</p></div>
+      </div>
+      <div class="shop-toolbar">
+        <div class="shop-toolbar__categories">
+          <p class="shop-toolbar__label">Explorar por categoria</p>
+          <div class="shop-filters" aria-label="Filtrar por categoria">
+            <button type="button" class="filter is-active" data-category="todos" aria-pressed="true">Todos</button>
+            <button type="button" class="filter" data-category="figuras" aria-pressed="false">Figuras</button>
+            <button type="button" class="filter" data-category="gaming" aria-pressed="false">Gaming</button>
+            <button type="button" class="filter" data-category="cosplay" aria-pressed="false">Cosplay e props</button>
+            <button type="button" class="filter" data-category="tecnicas" aria-pressed="false">Peças técnicas</button>
+            <button type="button" class="filter" data-category="utilidades" aria-pressed="false">Utilidades</button>
+          </div>
+        </div>
+        <label class="search-box" for="product-search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input id="product-search" type="search" placeholder="Pesquisar produtos…" autocomplete="off" /><span class="sr-only">Pesquisar produtos</span></label>
+      </div>
+      <div class="shop-results"><p id="results-count" aria-live="polite"></p><p>Imagens ilustrativas · detalhes sob consulta</p></div>
+      <div class="shop-grid" id="product-grid"></div>
+      <p class="no-results" id="no-results" hidden>Nenhum produto encontrado. Experimenta outra pesquisa ou categoria.</p>
+      <noscript><p>Activa o JavaScript para explorar o catálogo.</p></noscript>
+    </section>
+    <section class="shop-cta"><div><p class="section-label">TENS OUTRA IDEIA? <span></span></p><h2>Vamos criar algo <em>à tua maneira.</em></h2><p>Conta-nos o que tens em mente para o teu próximo projecto em 3D.</p></div><a href="index.html#contacto">Começar um projecto <span aria-hidden="true">↗</span></a></section>
+  </main>
+  <footer class="shop-footer"><a href="index.html"><img src="assets/popup3d-logo.png" alt="PopUP 3D Angola" /></a><p>© <span id="shop-year">2026</span> PopUP 3D Angola</p><a href="index.html#inicio">Voltar ao início ↑</a></footer>
+  <script src="catalogo.js"></script>
+</body>
+</html>
