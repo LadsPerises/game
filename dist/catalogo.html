@@ -18,16 +18,20 @@
   <link rel="stylesheet" href="navigation-upgrade.css" />
   <link rel="stylesheet" href="logo-fix.css" />
   <link rel="stylesheet" href="icons.css?v=20261029-icons" />
+  <link rel="stylesheet" href="cart.css?v=20261104-assemble" />
+  <link rel="stylesheet" href="logo-refresh.css?v=20261104" />
+  <link rel="stylesheet" href="header-unification.css?v=20261104" />
 </head>
-<body>
+<body data-whatsapp-number="">
   <header class="shop-header">
     <div class="shop-header__inner">
-      <a class="shop-brand" href="index.html#inicio" aria-label="PopUP 3D Angola — início"><img src="assets/popup3d-logo.webp" alt="" /></a>
+      <a class="shop-brand" href="index.html#inicio" aria-label="PopUP 3D Angola — início"><img src="assets/popup3d-header-logo.png?v=20261104-transparent" alt="PopUP 3D" /></a>
       <nav class="shop-nav" id="shop-navigation" aria-label="Navegação principal">
         <a href="index.html">Início</a><a class="active" href="catalogo.html" aria-current="page">Catálogo</a><a href="index.html#sobre">Sobre</a><a href="index.html#contacto">Contacto</a>
-        <a class="shop-nav__cta" href="index.html#contacto">Pedir orçamento <span aria-hidden="true"><i class="ui-icon ui-icon--arrow-up-right" aria-hidden="true"></i></span></a>
       </nav>
-      <a class="header-cta" href="index.html#contacto">Pedir orçamento <span aria-hidden="true"><i class="ui-icon ui-icon--arrow-up-right" aria-hidden="true"></i></span></a>
+      <button class="cart-toggle" id="cart-toggle" type="button" aria-controls="cart-drawer" aria-expanded="false" aria-label="Abrir carrinho">
+        <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 7h14l-1.1 13H6.1L5 7Zm3 0a4 4 0 0 1 8 0"/></svg><span>Carrinho</span><b id="cart-count" aria-live="polite">0</b>
+      </button>
       <button class="shop-menu-toggle" type="button" aria-controls="shop-navigation" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span></button>
     </div>
   </header>
@@ -38,7 +42,10 @@
         <div class="shop-hero__copy">
         <h1>O teu universo,<br /><span>em cada detalhe.</span></h1>
         <p>Figuras e acessórios impressos em 3D para dar personalidade ao teu espaço.</p>
-        <a href="#produtos" class="hero-link">Explorar produtos <span aria-hidden="true"><i class="ui-icon ui-icon--arrow-down" aria-hidden="true"></i></span></a>
+        <div class="shop-hero__actions">
+          <a href="#produtos" class="hero-link">Explorar produtos <span aria-hidden="true"><i class="ui-icon ui-icon--arrow-down" aria-hidden="true"></i></span></a>
+          <a href="index.html#contacto" class="hero-link hero-link--secondary">Pedir orçamento <span aria-hidden="true"><i class="ui-icon ui-icon--arrow-up-right" aria-hidden="true"></i></span></a>
+        </div>
         </div>
       </div>
     </section>
@@ -67,10 +74,22 @@
     </section>
     <section class="shop-cta"><div><p class="section-label">TENS OUTRA IDEIA? <span></span></p><h2>Vamos criar algo <em>à tua maneira.</em></h2><p>Conta-nos o que tens em mente para o teu próximo projecto em 3D.</p></div><a href="index.html#contacto">Começar um projecto <span aria-hidden="true"><i class="ui-icon ui-icon--arrow-up-right" aria-hidden="true"></i></span></a></section>
   </main>
+  <div class="cart-scrim" id="cart-scrim" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-labelledby="cart-title" aria-hidden="true" hidden>
+    <div class="cart-drawer__header"><div><p>O teu pedido</p><h2 id="cart-title">Carrinho <span id="cart-item-summary"></span></h2></div><button class="cart-close" type="button" aria-label="Fechar carrinho">×</button></div>
+    <div class="cart-drawer__items" id="cart-items"></div>
+    <div class="cart-drawer__footer">
+      <label for="cart-note">Observação do pedido <span>opcional</span></label>
+      <textarea id="cart-note" rows="3" placeholder="Cor, tamanho, quantidade especial ou outra ideia…"></textarea>
+      <p class="cart-drawer__note">Os produtos serão organizados por categoria na mensagem. Os detalhes e valores serão confirmados no WhatsApp.</p>
+      <button class="cart-checkout" id="cart-checkout" type="button">Enviar pedido pelo WhatsApp <span aria-hidden="true">↗</span></button>
+      <button class="cart-clear" id="cart-clear" type="button">Limpar carrinho</button>
+    </div>
+  </aside>
   <footer class="footer">
     <div class="footer__inner">
       <div class="footer__brand-block">
-        <a class="footer__brand" href="index.html#inicio" aria-label="PopUP 3D Angola — voltar ao início"><img src="assets/popup3d-logo.webp" alt="PopUP 3D Angola" loading="lazy" /></a>
+        <a class="footer__brand" href="index.html#inicio" aria-label="PopUP 3D Angola — voltar ao início"><img src="assets/popup3d-footer-badge.png" alt="PopUP 3D" loading="lazy" /></a>
         <p>Imprimimos o teu mundo em 3D.</p>
       </div>
       <div class="footer__column">
@@ -94,10 +113,9 @@
     </div>
     <div class="footer__bottom">
       <p>© <span id="shop-year">2026</span> PopUP 3D Angola</p>
-      <a class="footer__back-top" href="#">Voltar ao topo <span aria-hidden="true"><i class="ui-icon ui-icon--arrow-up" aria-hidden="true"></i></span></a>
     </div>
   </footer>
-  <script src="catalogo.js"></script>
+  <script src="catalogo.js?v=20261104-gamefx"></script>
   <script src="reveal.js"></script>
 </body>
 </html>

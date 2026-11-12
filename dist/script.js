@@ -90,12 +90,63 @@ gameScene.addEventListener("pointerleave", () => {
 updateGameScene();
 
 const requestForm = document.querySelector(".request-form");
+const categoryPicker = document.querySelector("[data-category-picker]");
+const categorySelect = document.querySelector("#request-type");
+const categoryTrigger = categoryPicker?.querySelector(".category-picker__trigger");
+const categoryOptions = categoryPicker?.querySelector(".category-picker__options");
+
+function closeCategoryPicker() {
+  if (!categoryPicker) return;
+  categoryPicker.classList.remove("is-open");
+  categoryTrigger.setAttribute("aria-expanded", "false");
+  categoryOptions.hidden = true;
+}
+
+if (categoryPicker) {
+  categoryTrigger.addEventListener("click", () => {
+    const willOpen = !categoryPicker.classList.contains("is-open");
+    closeCategoryPicker();
+    if (willOpen) {
+      categoryPicker.classList.add("is-open");
+      categoryTrigger.setAttribute("aria-expanded", "true");
+      categoryOptions.hidden = false;
+    }
+  });
+
+  categoryOptions.addEventListener("click", (event) => {
+    const option = event.target.closest("[data-value]");
+    if (!option) return;
+    categorySelect.value = option.dataset.value;
+    categoryTrigger.querySelector("span").textContent = option.dataset.value;
+    categoryOptions.querySelectorAll("[role=option]").forEach((item) => item.setAttribute("aria-selected", String(item === option)));
+    categoryPicker.classList.remove("is-invalid");
+    closeCategoryPicker();
+    categoryTrigger.focus();
+  });
+
+  categoryTrigger.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") closeCategoryPicker();
+    if (event.key === "ArrowDown" || event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      if (categoryOptions.hidden) categoryTrigger.click();
+      categoryOptions.querySelector("button")?.focus();
+    }
+  });
+  document.addEventListener("click", (event) => { if (!categoryPicker.contains(event.target)) closeCategoryPicker(); });
+}
+
 const requestedProduct = new URLSearchParams(window.location.search).get("produto");
 if (requestedProduct) {
   document.querySelector("#request-idea").value = `Gostaria de saber mais sobre: ${requestedProduct}.`;
 }
 requestForm.addEventListener("submit", async (event) => {
   event.preventDefault();
+  if (!categorySelect.value) {
+    categoryPicker.classList.add("is-invalid");
+    categoryTrigger.focus();
+    requestForm.querySelector(".request-form__feedback").textContent = "Escolhe uma categoria para continuar.";
+    return;
+  }
   if (!requestForm.reportValidity()) return;
 
   const values = new FormData(requestForm);

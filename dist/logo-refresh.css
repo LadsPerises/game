@@ -1,0 +1,15 @@
+/* Os novos logótipos preservam as suas proporções, sem máscaras circulares. */
+.brand, .shop-brand { overflow: visible; }
+.brand img, .shop-brand img { border-radius: 0; height: auto; object-fit: contain; width: clamp(132px, 12vw, 188px); }
+.footer__brand { width: 108px; }
+.footer__brand img { aspect-ratio: 1; border-radius: 0; object-fit: contain; width: 100%; }
+
+@media (max-width: 900px) {
+  .brand img, .shop-brand img { width: 126px; }
+  .footer__brand { width: 96px; }
+}
+
+@media (max-width: 560px) {
+  .brand img, .shop-brand img { width: 112px; }
+  .footer__brand { width: 88px; }
+}

@@ -26,31 +26,35 @@
   <link rel="stylesheet" href="hero-refresh.css?v=20261029-hero" />
   <link rel="stylesheet" href="logo-fix.css" />
   <link rel="stylesheet" href="icons.css?v=20261029-icons" />
+  <link rel="stylesheet" href="responsive-polish.css?v=20261104" />
+  <link rel="stylesheet" href="logo-refresh.css?v=20261104" />
+  <link rel="stylesheet" href="cart.css?v=20261104" />
+  <link rel="stylesheet" href="header-unification.css?v=20261104" />
 </head>
 
 <body>
+  <header class="navigation">
+    <a class="brand" href="#inicio" aria-label="PopUP 3D Angola, início">
+      <img src="assets/popup3d-header-logo.png?v=20261104-transparent" alt="PopUP 3D" />
+    </a>
+    <nav id="main-navigation" aria-label="Navegação principal">
+      <a class="is-active" href="#inicio" aria-current="page">Início</a>
+      <a href="catalogo.html">Catálogo</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="cart-toggle cart-toggle--link" id="home-cart-toggle" href="catalogo.html" aria-label="Ver carrinho">
+      <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 7h14l-1.1 13H6.1L5 7Zm3 0a4 4 0 0 1 8 0"/></svg><span>Carrinho</span><b id="home-cart-count" aria-live="polite">0</b>
+    </a>
+    <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-navigation"
+      aria-expanded="false">
+      <span></span><span></span>
+    </button>
+  </header>
   <main class="site">
     <section class="hero" aria-label="PopUP 3D Angola">
       <div class="hero__background" aria-hidden="true"></div>
       <div class="hero__overlay" aria-hidden="true"></div>
-
-      <header class="navigation">
-        <a class="brand" href="#inicio" aria-label="PopUP 3D Angola, início">
-          <img src="assets/popup3d-logo.webp" alt="" />
-        </a>
-        <nav id="main-navigation" aria-label="Navegação principal">
-          <a class="is-active" href="#inicio" aria-current="page">Início</a>
-          <a href="catalogo.html">Catálogo</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#contacto">Contacto</a>
-          <a class="nav-mobile-cta" href="#contacto">Pedir orçamento <i class="ui-icon ui-icon--arrow-up-right" aria-hidden="true"></i></a>
-        </nav>
-        <a class="nav-cta" href="#contacto">Pedir orçamento <span aria-hidden="true"><i class="ui-icon ui-icon--arrow-up-right" aria-hidden="true"></i></span></a>
-        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="main-navigation"
-          aria-expanded="false">
-          <span></span><span></span>
-        </button>
-      </header>
 
       <section class="hero__content" id="inicio">
         <div class="copy">
@@ -210,15 +214,27 @@
         <input id="request-name" name="name" autocomplete="name" placeholder="O teu nome" required />
         <label for="request-contact">Contacto</label>
         <input id="request-contact" name="contact" placeholder="Telefone ou e-mail" required />
-        <label for="request-type">O que queres criar?</label>
-        <select id="request-type" name="type" required>
+        <label id="request-type-label">O que queres criar?</label>
+        <div class="category-picker" data-category-picker>
+          <select id="request-type" name="type" class="category-picker__native" aria-hidden="true" tabindex="-1">
           <option value="" disabled selected>Escolhe uma categoria</option>
           <option>Figura ou coleccionável</option>
           <option>Acessório gaming</option>
           <option>Cosplay ou prop</option>
           <option>Peça técnica</option>
           <option>Outra ideia</option>
-        </select>
+          </select>
+          <button class="category-picker__trigger" type="button" aria-labelledby="request-type-label" aria-haspopup="listbox" aria-expanded="false" aria-controls="request-type-options">
+            <span>Escolhe uma categoria</span><i aria-hidden="true"></i>
+          </button>
+          <div class="category-picker__options" id="request-type-options" role="listbox" aria-labelledby="request-type-label" hidden>
+            <button type="button" role="option" data-value="Figura ou coleccionável">Figura ou coleccionável</button>
+            <button type="button" role="option" data-value="Acessório gaming">Acessório gaming</button>
+            <button type="button" role="option" data-value="Cosplay ou prop">Cosplay ou prop</button>
+            <button type="button" role="option" data-value="Peça técnica">Peça técnica</button>
+            <button type="button" role="option" data-value="Outra ideia">Outra ideia</button>
+          </div>
+        </div>
         <label for="request-idea">Descreve a tua ideia</label>
         <textarea id="request-idea" name="idea" rows="3" placeholder="Forma, cor, tamanho ou detalhes importantes…"
           required></textarea>
@@ -234,7 +250,7 @@
     <div class="footer__inner">
       <div class="footer__brand-block">
         <a class="footer__brand" href="#inicio" aria-label="PopUP 3D Angola — voltar ao início">
-          <img src="assets/popup3d-logo.webp" alt="PopUP 3D Angola" loading="lazy" />
+          <img src="assets/popup3d-footer-badge.png" alt="PopUP 3D" loading="lazy" />
         </a>
         <p>Imprimimos o teu mundo em 3D.</p>
       </div>
@@ -261,10 +277,10 @@
     </div>
     <div class="footer__bottom">
       <p>© <span id="current-year">2026</span> PopUP 3D Angola</p>
-      <a class="footer__back-top" href="#inicio">Voltar ao topo <span aria-hidden="true"><i class="ui-icon ui-icon--arrow-up" aria-hidden="true"></i></span></a>
     </div>
   </footer>
   <script src="script.js?v=20261029-hero"></script>
+  <script src="home-cart.js?v=20261104"></script>
   <script src="reveal.js"></script>
 </body>
 
